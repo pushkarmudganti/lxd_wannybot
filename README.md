@@ -5,7 +5,7 @@
 **
 📌 Overview
 
-LXC-BOT-WANNYDRAGON is a powerful and dedicated automation bot designed to create, manage, and deploy LXD/LXC virtual private servers (VPS) with high uptime, optimized resource allocation, and enterprise-grade performance.
+**__LXC-BOT-WANNYDRAGON is a powerful and dedicated automation bot designed to create, manage, and deploy LXD/LXC virtual private servers (VPS) with high uptime, optimized resource allocation, and enterprise-grade performance.__**
 
 This bot is built for speed, stability, and scalability, allowing system administrators and hosting providers to deploy containers quickly and securely with minimal manual effort.
 
@@ -25,11 +25,11 @@ This bot is built for speed, stability, and scalability, allowing system adminis
 
 🤖 Fully automated via bot interface
 
-🖥️ System Requirements
+# 🖥️ System Requirements
 
 Before installing LXC-BOT-WANNYDRAGON, ensure your system meets the following requirements:
 
-Minimum Requirements
+## Minimum Requirements :
 
 OS: Ubuntu 20.04 / 22.04 (Recommended)
 
@@ -43,7 +43,8 @@ Storage: 20 GB Free Space
 
 Root Access: Required
 
-🔧 Prerequisites Installation
+## 🔧 Prerequisites Installation
+
 1️⃣ Update System Packages
 `apt update && apt upgrade -y`
 
