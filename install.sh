@@ -14,20 +14,18 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Update system
-echo "[1/8] Updating system packages..."
+echo "[1/10] Updating system packages..."
 apt update && apt upgrade -y && apt install sudo -y && apt install git -y 
-git clone https://github.com/pushkarmudganti/LXC-BOT-WANNYDRAGON
-cd LXC-BOT-WANNYDRAGON
 
 # Install LXC/LXD
-echo "[2/8] Installing LXC and dependencies..."
+echo "[2/10] Installing LXC and dependencies..."
 apt install lxc lxc-utils bridge-utils uidmap -y
 
-echo "[3/8] Installing snapd..."
+echo "[3/10] Installing snapd..."
 apt install snapd -y
 systemctl enable --now snapd.socket
 
-echo "[4/8] Installing LXD ..."
+echo "[4/10] Installing LXD ..."
 snap install lxd
 
 # Add user to lxd group
@@ -40,23 +38,38 @@ else
 fi
 
 # Install Python and pip
-echo "[5/8] Installing Python and pip..."
+echo "[5/10] Installing Python and pip..."
 apt install python3 python3-pip python3-venv -y
 
 # Create virtual environment
-echo "[6/8] Setting up Python virtual environment..."
+echo "[6/10] Setting up Python virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
 
 # Update requirements.txt
-echo "[8/8] Installing Requirements.txt..."
+echo "[8/10] Installing Requirements.txt..."
 pip install -r requirements.txt
 
 # Install Python dependencies
-echo "[8/8] Installing Python packages..."
+echo "[9/10] Installing Python packages..."
 pip install --upgrade pip
 pip install -U discord.py
 pip install PyNaCl
+
+echo "[10/10] Installing Python packages..."
+apt update -y
+apt install -y git
+
+if [ ! -d "LXC-BOT-WANNYDRAGON" ]; then
+  git clone https://github.com/pushkarmudganti/LXC-BOT-WANNYDRAGON.git
+fi
+
+cd LXC-BOT-WANNYDRAGON
+
+# continue setup here
+echo "Repo cloned and ready 🚀"
+
+
 
 # Create data directories
 mkdir -p data
