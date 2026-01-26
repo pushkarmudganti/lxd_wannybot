@@ -48,7 +48,8 @@ source venv/bin/activate
 # Install Python dependencies
 echo "[7/7] Installing Python packages..."
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -U discord.py
+pip install PyNaCl
 
 # Create data directories
 mkdir -p data
@@ -59,7 +60,8 @@ chown -R $SUDO_USER:$SUDO_USER .
 
 echo ""
 echo "================================================"
-echo "         ✅ Installation Complete!                 "
+echo "         ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ 
+echo "         ᴛʜᴀɴᴋꜱ ʏᴏᴜ ꜰᴏʀ ᴜꜱɪɴɢ ᴄᴏᴅᴇ
 echo "================================================"
 echo ""
 echo "Next steps:"
@@ -69,8 +71,12 @@ echo ""
 echo "2. Re-login or run: newgrp lxd"
 echo ""
 echo "3. Start the panel:"
-echo "   cd Svm-bot"
+echo "   cd LXC-BOT-WANNYDRAGON"
 echo "   source venv/bin/activate"
-echo "   python3 bot.py"
+echo "   "
+echo "4.  Update file " 
+echo "   nano .env" 
+echo "   
+echo " 
 echo ""
 echo "================================================"
