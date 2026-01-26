@@ -1,19 +1,17 @@
-🐉 LXC-BOT-WANNYDRAGON
-High-Performance LXD VPS Automation Bot
+## 🐉 LXC-BOT-WANNYDRAGON
+# High-Performance LXD VPS Automation Bot
 
-Developed by @wannydragon
-
+# **Developed by @wannydragon**
+**
 📌 Overview
 
 LXC-BOT-WANNYDRAGON is a powerful and dedicated automation bot designed to create, manage, and deploy LXD/LXC virtual private servers (VPS) with high uptime, optimized resource allocation, and enterprise-grade performance.
 
 This bot is built for speed, stability, and scalability, allowing system administrators and hosting providers to deploy containers quickly and securely with minimal manual effort.
 
-⚙️ Key Features
+**⚙️ Key Features**
 
-🚀 Automated LXC/LXD VPS creation
-
-💪 Dedicated and configurable CPU, RAM, Disk, and Network limits
+**BETTER AND FASTER REPONSE**
 
 🔐 Secure container isolation
 
@@ -47,13 +45,13 @@ Root Access: Required
 
 🔧 Prerequisites Installation
 1️⃣ Update System Packages
-apt update && apt upgrade -y
+`apt update && apt upgrade -y`
 
 2️⃣ Install Required Dependencies
-apt install -y curl wget git sudo lxd lxd-client jq
+`apt install -y curl wget git sudo lxd lxd-client jq`
 
 3️⃣ Initialize LXD
-lxd init
+`lxd init`
 
 
 Recommended answers during setup:
@@ -64,7 +62,17 @@ Network bridge: yes
 
 Auto-update images: yes
 
-🐉 LXC-BOT-WANNYDRAGON Installation
+🚀 LXC-BOT-WANNYDRAGON Installation
 1️⃣ Clone the Bot Repository
-git clone https://github.com/wannydragon/LXC-BOT-WANNYDRAGON.git
-cd LXC-BOT-WANNYDRAGON
+`git clone https://github.com/wannydragon/LXC-BOT-WANNYDRAGON.git`
+`cd LXC-BOT-WANNYDRAGON`
+DO ```bash install.sh```
+UPDATE THE .env
+**
+`nano .env`
+
+UPDATE 
+`
+# DISCORD_TOKEN - YOUR DISCORD TOKEN
+# MAIN_ADMIN - CHANGE WITH EXAMPLE - 1234567891234531
+`
