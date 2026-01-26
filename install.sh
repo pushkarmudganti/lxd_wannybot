@@ -1,8 +1,9 @@
 #!/bin/bash
 # PVM Installation Script
+echo ""
 echo "================================================"
-echo "         📝ᴘᴠᴍ ʙᴏᴛ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ꜱᴄʀɪᴘᴛ 
-echo ".          🚀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴡᴀɴɴʏ ᴅʀᴀɢᴏɴ 
+echo "         📝ᴘᴠᴍ ʙᴏᴛ ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ꜱᴄʀɪᴘᴛ  "          
+echo "         🚀 ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝗪𝗔𝗡𝗡𝗬 𝗗𝗥𝗔𝗚𝗢𝗡     "
 echo "================================================"
 echo ""
 
@@ -13,18 +14,18 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Update system
-echo "[1/7] Updating system packages..."
-apt update && apt upgrade -y
+echo "[1/8] Updating system packages..."
+apt update && apt upgrade -y && apt install sudo -y
 
 # Install LXC/LXD
-echo "[2/7] Installing LXC and dependencies..."
+echo "[2/8] Installing LXC and dependencies..."
 apt install lxc lxc-utils bridge-utils uidmap -y
 
-echo "[3/7] Installing snapd..."
+echo "[3/8] Installing snapd..."
 apt install snapd -y
 systemctl enable --now snapd.socket
 
-echo "[4/7] Installing LXD ..."
+echo "[4/8] Installing LXD ..."
 snap install lxd
 
 # Add user to lxd group
@@ -37,16 +38,20 @@ else
 fi
 
 # Install Python and pip
-echo "[5/7] Installing Python and pip..."
+echo "[5/8] Installing Python and pip..."
 apt install python3 python3-pip python3-venv -y
 
 # Create virtual environment
-echo "[6/7] Setting up Python virtual environment..."
+echo "[6/8] Setting up Python virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
 
+# Update requirements.txt
+echo "[8/8] Installing Requirements.txt..."
+pip install -r requirements.txt
+
 # Install Python dependencies
-echo "[7/7] Installing Python packages..."
+echo "[8/8] Installing Python packages..."
 pip install --upgrade pip
 pip install -U discord.py
 pip install PyNaCl
@@ -60,8 +65,8 @@ chown -R $SUDO_USER:$SUDO_USER .
 
 echo ""
 echo "================================================"
-echo "         ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ 
-echo "         ᴛʜᴀɴᴋꜱ ʏᴏᴜ ꜰᴏʀ ᴜꜱɪɴɢ ᴄᴏᴅᴇ
+echo "         ɪɴꜱᴛᴀʟʟᴀᴛɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ "
+echo "         ᴛʜᴀɴᴋꜱ ʏᴏᴜ ꜰᴏʀ ᴜꜱɪɴɢ ᴄᴏᴅᴇ "
 echo "================================================"
 echo ""
 echo "Next steps:"
@@ -75,7 +80,7 @@ echo "   cd LXC-BOT-WANNYDRAGON"
 echo "   source venv/bin/activate"
 echo "   "
 echo "4.  Update file " 
-echo "   nano .env" 
+echo "   nano bot.py" 
 echo "   
 echo " 
 echo ""
