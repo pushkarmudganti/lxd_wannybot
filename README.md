@@ -48,7 +48,7 @@ Root Access: Required
 
 ## 📌 AUTO INSTALLATION SCRIPT 
 
-```bash -c "$(curl -fsSL https://raw.githubusercontent.com/pushkarmudganti/LXC-BOT-WANNYDRAGON/main/install.sh)"```
+```bash -c "$(curl -fsSL https://raw.githubusercontent.com/pushkarmudganti/lxd_wannybot/main/install.sh)"```
 
 ```cd LXC-BOT-WANNYDRAGON```
 
